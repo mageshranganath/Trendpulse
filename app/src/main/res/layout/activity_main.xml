@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_main_screen">
+
+    <!-- AppBar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            app:titleTextColor="@android:color/white"
+            app:title="@string/app_name" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="-8dp"
+        android:alpha="0.30"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:src="@mipmap/ic_launcher" />
+
+    <!-- Scrollable content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/colorSurface"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonThemeMode"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginBottom="4dp"
+                        android:minWidth="0dp"
+                        android:text="@string/btn_theme_dark"
+                        android:textAllCaps="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="serif"
+                        android:text="@string/label_more_trends"
+                        android:textColor="@color/colorTextPrimary"
+                        android:textSize="26sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="14dp"
+                        android:text="@string/main_subtitle"
+                        android:textColor="@color/colorTextSecondary"
+                        android:textSize="13sp" />
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alignmentMode="alignMargins"
+                        android:columnCount="2"
+                        android:rowCount="3"
+                        android:useDefaultMargins="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonCurrencyTrend"
+                            style="@style/Widget.CurrencyTrend.Button.Tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:minHeight="94dp"
+                            android:text="@string/btn_currency_trend"
+                            android:textAllCaps="false"
+                            app:icon="@android:drawable/ic_menu_sort_by_size"
+                            app:iconGravity="top"
+                            app:iconPadding="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonWeatherTrend"
+                            style="@style/Widget.CurrencyTrend.Button.Tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_marginBottom="6dp"
+                            android:minHeight="94dp"
+                            android:text="@string/btn_weather_trend"
+                            android:textAllCaps="false"
+                            app:icon="@android:drawable/ic_menu_compass"
+                            app:iconGravity="top"
+                            app:iconPadding="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonMarketTrend"
+                            style="@style/Widget.CurrencyTrend.Button.Tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="8dp"
+                            android:minHeight="94dp"
+                            android:text="@string/btn_market_trend"
+                            android:textAllCaps="false"
+                            app:icon="@android:drawable/ic_menu_agenda"
+                            app:iconGravity="top"
+                            app:iconPadding="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonMusicTrend"
+                            style="@style/Widget.CurrencyTrend.Button.Tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_marginTop="2dp"
+                            android:minHeight="94dp"
+                            android:text="@string/btn_music_trend"
+                            android:textAllCaps="false"
+                            app:icon="@android:drawable/ic_media_play"
+                            app:iconGravity="top"
+                            app:iconPadding="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonMoviesTrend"
+                            style="@style/Widget.CurrencyTrend.Button.Tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="8dp"
+                            android:minHeight="94dp"
+                            android:text="@string/btn_movies_trend"
+                            android:textAllCaps="false"
+                            app:icon="@android:drawable/ic_menu_slideshow"
+                            app:iconGravity="top"
+                            app:iconPadding="8dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/buttonPodcastTrend"
+                            style="@style/Widget.CurrencyTrend.Button.Tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_marginTop="2dp"
+                            android:minHeight="94dp"
+                            android:text="@string/btn_podcast_trend"
+                            android:textAllCaps="false"
+                            app:icon="@android:drawable/ic_btn_speak_now"
+                            app:iconGravity="top"
+                            app:iconPadding="8dp" />
+                    </GridLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
